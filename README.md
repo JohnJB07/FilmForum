@@ -13,6 +13,17 @@ Agreed upon color-scheme:
 - Secondary: nil
 - Tertiary: nil
 
+# Note:
+If you want to add a script or stylesheet you made you can just create a new link tag in the head. BUT place them in the respective
+folders (e.g. yourscript.js -> js folder, yourcss.css -> css folder).
+```
+<!-- CSS -->
+<link rel="stylesheet" href="css/yourcssfilename.css">
+
+<!-- Javascript -->
+<script src="js/yourjavascriptfilename.js">
+```
+
 # IMPORTANT: 
 - For concerns or questions, contact our group chat in Facebook/Messenger or the Discord Server I sent..
 - If you also have any suggestions for improvement 
