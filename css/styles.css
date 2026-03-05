@@ -1,0 +1,99 @@
+body {
+    font-family: 'Courier New', 'Courier', 'monospace';
+    background-color: #eae0cf;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+/* UNIVERSAL HEADER */
+header {
+    color: #eae0cf;
+    background-color: #213448;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+header h1 {
+    grid-column: span 6;
+}
+
+header nav {
+    grid-column: span 6;
+    justify-self: end;
+}
+
+header nav a {
+    padding: 30px;
+    color: #eae0cf;
+    text-decoration: none;
+}
+
+/* LOGIN FORM STYLING */
+.form-center {
+    margin-top: 5%;
+}
+
+.form-font {
+    font-weight: bold;
+    font-size: 20px;
+    color: #EAE0CF;
+}
+
+.form-data form {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    border: none;
+    padding: 50px;
+    background-color: #547792;
+    max-width: 350px;
+    margin: auto;
+}
+
+.form-data form fieldset {
+    border: none;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-data form fieldset legend {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.login-form input {
+    padding: 4px;
+    border: none;
+}
+
+.login-form input[type=password], .form-data input[type=text] {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 10px
+    
+}
+
+.login-form fieldset input[type=submit] {
+    margin-top: 10px;
+    max-width: 80px;
+}
+
+.login-form input[type=submit] {
+    border-radius: 6px;
+    padding: 10px;
+    max-width: auto;
+    font-weight: bold;
+    color: #eae0cf;
+    background-color: #94B4C1;
+}
+
+.login-form input[type=submit]:hover {
+    background-color: #849fab;
+    border: none;
+}
+
+/* ADD NAME OF PART */

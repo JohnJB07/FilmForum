@@ -6,8 +6,53 @@
     <title>Sign up</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/script.js"></script>
+    
 </head>
     <body>
-        <!-- Sign up Form -->
+        <header>
+            <h1>Create an Account</h1>
+            <p>Join FilmForum today</p>
+        </header>
+        <main>
+            <section class="register-card">
+            <form action="#" method="post">
+                <fieldset>
+                    <label for="username">Username</label>
+                    <input  type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a username"
+                            minlength="3"
+                            maxlength="20"
+                            required>
+                </fieldset>
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input  type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            minlength="8"
+                            maxlength="64"
+                            required>
+                </fieldset>
+                <fieldset> 
+                    <label for="confirm">Confirm Password</label>
+                    <input  type="password"
+                            id="confirm"
+                            name="confirm"
+                            placeholder="Re-enter your password"
+                            minlength="8"
+                            maxlength="64"
+                            required>
+                </fieldset>
+                <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="login.html">Log in</a></p>
+            </section>
+        </main>
+        <footer>
+                
+        </footer>
     </body>
 </html>
