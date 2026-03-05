@@ -25,5 +25,5 @@ folders (e.g. yourscript.js -> js folder, yourcss.css -> css folder).
 ```
 
 # IMPORTANT: 
-- For concerns or questions, contact our group chat in Facebook/Messenger or the Discord Server I sent..
+- For concerns or questions, contact our group chat in Facebook/Messenger or the Discord Server I sent.
 - If you also have any suggestions for improvement 
