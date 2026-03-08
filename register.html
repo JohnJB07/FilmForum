@@ -1,57 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title></title>
+    </head>
     <body>
-        <header>
-            <h1>Create an Account</h1>
-            <p>Join FilmForum today</p>
+        <header class="grid">
+            <h1>FilmForum</h1>
+            <nav>
+                <a href="index.html">Homepage</a>
+                <a href="movie.html">Movie</a>
+                <a href="profile.html">Profile</a>
+            </nav>
         </header>
         <main>
-            <section class="register-card">
-            <form action="#" method="post">
-                <fieldset>
-                    <label for="username">Username</label>
-                    <input  type="text"
-                            id="username"
-                            name="username"
-                            placeholder="Choose a username"
-                            minlength="3"
-                            maxlength="20"
-                            required>
-                </fieldset>
-                <fieldset>
-                    <label for="password">Password</label>
-                    <input  type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Enter your password"
-                            minlength="8"
-                            maxlength="64"
-                            required>
-                </fieldset>
-                <fieldset> 
-                    <label for="confirm">Confirm Password</label>
-                    <input  type="password"
-                            id="confirm"
-                            name="confirm"
-                            placeholder="Re-enter your password"
-                            minlength="8"
-                            maxlength="64"
-                            required>
-                </fieldset>
-                <button type="submit">Sign Up</button>
+            <section class="container-form-outer">
+                <div class="container-form-inner">
+                    <form method="POST" id="register-form-data">
+                    <fieldset class="container-form-field">
+                        <legend>Create an Account<br>Join FilmForum Today!</legend>
+                        <label for="register-user">Username</label>
+                        <input type="text" id="register-user" minlength="3" maxlength="16" required>
+                        <label for="register-pass">Password</label>
+                        <input type="password" id="register-pass" minlength="3" maxlength="20" required>
+                        <label for="confirm-pass">Confirm Password</label>
+                        <input type="password" id="confirm-pass" minlength="3" maxlength="20" required>
+                        <input type="submit" value="Submit">
+                    </fieldset>
                 </form>
-                <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+                <p>Already have an account?</p>
+                <p>Login <a href="login.html">here.</a></p>
             </section>
         </main>
-        <footer>
-                
-        </footer>
     </body>
+    <script src="js/script.js"></script>
 </html>

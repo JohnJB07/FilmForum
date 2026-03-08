@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-</head>
-    <body onload="loadUserData()" on>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title></title>
+    </head>
+    <body>
         <header class="grid">
-            <h1>
-                FilmForum
-            </h1>
+            <h1>FilmForum</h1>
             <nav>
                 <a href="index.html">Homepage</a>
-                <a href="movie.html">Movies</a>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+                <a href="movie.html">Movie</a>
                 <a href="profile.html">Profile</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Signup</a>
             </nav>
         </header>
+        <main class="browse-container">
+        <aside class="browse-sidebar">
+            <h3>Categories</h3>
+            <div class="tag-group">
+                <span class="tag">Genre <button>x</button></span>
+                <span class="tag">Genre <button>x</button></span>
+                <span class="tag">Genre <button>x</button></span>
+            </div>
+        </aside>
+
+        <section class="browse-content">
+            <div class="browse-top-bar">
+                <input type="text" placeholder="Search..." class="browse-search">
+                <button class="browse-add-btn">Add movie</button>
+            </div>
+
+            <div class="browse-grid">
+                <div class="browse-card">
+                    <div class="browse-image-placeholder"></div>
+                    <p>Movie Name</p>
+                </div>
+                <div class="browse-card">
+                    <div class="browse-image-placeholder"></div>
+                    <p>Movie Name</p>
+                </div>
+                <div class="browse-card">
+                    <div class="browse-image-placeholder"></div>
+                    <p>Movie Name</p>
+                </div>
+                <div class="browse-card">
+                    <div class="browse-image-placeholder"></div>
+                    <p>Movie Name</p>
+                </div>
+                <div class="browse-card">
+                    <div class="browse-image-placeholder"></div>
+                    <p>Movie Name</p>
+                </div>
+            </div>
+        </section>
+    </main>
     </body>
+    <script src="js/script.js"></script>
 </html>

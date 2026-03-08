@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Login</title>
+    </head>
     <body>
-        <!-- Login Form -->
         <header class="grid">
             <h1>FilmForum</h1>
             <nav>
                 <a href="index.html">Homepage</a>
-                <a href="movie.html">Movies</a>
+                <a href="movie.html">Movie</a>
                 <a href="profile.html">Profile</a>
-                <a href="login.html">Login</a>
             </nav>
         </header>
         <main>
-            <section class="form-center">
-                <div class="form-font">
-                    <div class="form-data">
-                        <!-- 
-                            Do not submit it will crash the page 
-                            there is no way for the form to submit
-                            to a server/databse so submitting will
-                            just crash the server
-                        -->
-                        <form id="form-data" method="POST" action="">
-                            <fieldset class="login-form">
-                                <legend>Log In</legend>
-                                <label for="login-username">Username</label>
-                                <input minlength="3" maxlength="20" id="login-username" type="text" required>
-                                <label for="login-password">Password</label>
-                                <input id="login-password" type="password" required>
-                                <input type="submit" value="Submit">
-                            </fieldset>
-                        </form>
-                    </div>
+            <section class="container-form-outer">
+                <div class="container-form-inner">
+                    <form method="GET" id="login-form-data">
+                    <fieldset class="container-form-field">
+                        <legend>Login</legend>
+                        <label for="login-user">Username</label>
+                        <input type="text" id="login-user" minlength="3" maxlength="16" required>
+                        <label for="login-pass">Password</label>
+                        <input type="password" id="login-pass" minlength="3" maxlength="20" required>
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
                 </div>
-                <p style="text-align: center;">Dont have an account? <a href="register.html">Sign up Here</a></p>
+                <p>Dont have an account?</p>
+                <p>Sign up <a href="register.html">here.</a></p>
             </section>
         </main>
     </body>
+    <script src="js/script.js"></script>
 </html>

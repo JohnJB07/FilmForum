@@ -1,19 +1,25 @@
 body {
     font-family: 'Courier New', 'Courier', 'monospace';
-    background-color: #eae0cf;
     margin: 0;
+    background-color: #eae0cf;
 }
 
+/*******
+* Grid *
+********/
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
 }
-/* UNIVERSAL HEADER */
+
+/*******************
+* Universal Header *
+*******************/
 header {
     color: #eae0cf;
     background-color: #213448;
-    padding: 10px 40px;
+    padding: 10px 30px;
     align-items: center;
 }
 
@@ -27,241 +33,201 @@ header nav {
 }
 
 header nav a {
-    padding: 30px;
-    color: #eae0cf;
+    padding: 24px;
     text-decoration: none;
+    color: #eae0cf;
 }
 
-/* LOGIN FORM STYLING */
-.form-center {
-    margin-top: 5%;
-}
-
-.form-font {
-    font-weight: bold;
-    font-size: 20px;
-    color: #EAE0CF;
-}
-
-.form-data form {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    border-radius: 4px;
+/******************************
+* For the Login / Signup Form *
+******************************/
+fieldset {
     border: none;
-    padding: 50px;
-    background-color: #547792;
-    max-width: 350px;
-    margin: auto;
 }
 
-.form-data form fieldset {
-    border: none;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.form-data form fieldset legend {
+legend {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 48px;
+    margin: 10px 0;
 }
 
-.login-form input {
-    padding: 4px;
-    border: none;
-}
-
-.login-form input[type=password], .form-data input[type=text] {
-    margin-bottom: 10px;
-    border-radius: 4px;
-    padding: 10px
-    
-}
-
-.login-form fieldset input[type=submit] {
+input[type=submit] {
     margin-top: 10px;
-    max-width: 80px;
-}
-
-.login-form input[type=submit] {
     border-radius: 6px;
     padding: 10px;
     max-width: auto;
     font-weight: bold;
     color: #eae0cf;
-    background-color: #94B4C1;
-    cursor: pointer;
-}
-
-.login-form input[type=submit]:hover {
-    background-color: #849fab;
+    background-color: #94b4c1;
     border: none;
-
 }
 
-/* PROFILE PAGE STYLING */
-.profile-container{
-    max-width: 1100px;
-    margin: 40px auto;
+input[type=submit]:hover {
+    background-color: #849fab;
+    border: 1px solid black;
+}
+
+/* Styling outside the form container */
+.container-form-outer {
+    font-size: 14px;
+    padding: 30px;
+    font-weight: bold;
+}
+
+/* Style container for the FORM */
+.container-form-outer p {
+    text-align: center;
+}
+
+.container-form-inner {
+    justify-self: center;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    color: #eae0cf;
+    padding: 50px;
+    margin-top: 5%;
+    background-color: #547792;
+}
+
+.container-form-field {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
+}
+
+.container-form-field input[type=text], 
+.container-form-field input[type=password] {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px
+}
+
+/* Profile Attempt */
+.moview-review-container {
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-flow: column nowrap;
+    background-color: #f6f2e7;
+    padding: 20px;
+}
+
+.container-profile {
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 80%;
+    display: flex;
+    margin: 40px auto;
+    flex-flow: column nowrap;
+    background-color: #f6f2e7;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+/* Add flex to container and center it*/
+.container-flex {
+    display: flex;
+    justify-content: center;
+}
+
+/* Add 12 column grid to container*/
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 30px;
 }
 
-.profile-card{
-    background-color: #f6f2e7;
-    padding: 40px;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.profile-title {
+    padding-left: 5px;
+}
 
+.profile-details-info {
+    grid-column: span 4;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 60px;
-    align-items: start;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
 }
 
-.profile-header{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.profile-avatar img{
+.profile-details-info img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
+    margin: 40px 0 0 40px;
 }
 
-.profile-name h2{
+.profile-details-info-text {
+    margin: 40px 0 0 0;
+}
+
+.profile-details-info-text h3 {
     margin: 0;
     font-size: 32px;
 }
 
-.profile-name p{
+.profile-details-info-text p {
     margin: 5px 0 0 0;
     color: gray;
     font-size: 16px;
 }
 
-.profile-form{
+.profile-details-about {
+    margin: 40px 0 0 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 30px;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    grid-column: 5/ span 8;
 }
 
-.profile-form label{
-    font-size: 16px;
-}
-
-.profile-form input{
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-}
-
-.profile-form .email-field{
-    grid-column: span 2;
-}
-
-.profile-form textarea{
-    grid-column: span 2;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    height: 140px;
-    resize: none;
-}
-
-.favorite-movies{
-    
-    background-color: #f6f2e7;
-    padding: 25px;
+.profile-about-p-container {
+    border: 1px solid black;
     border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.favorite-movies h3{
-    margin-top: 0;
+.profile-about-p-container p {
+    margin: 15px;
 }
 
-.movie-grid{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.movie-card{
-    width: 150px;
-    text-align: center;
-}
-
-.movie-card img{
-    
-    width: 100%;
-    height: 180px;
-    background-color: #ddd;
-    border-radius: 4px;
-}
-
-.movie-card p{
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-.watchlist{
-    background-color: #f6f2e7;
-    padding: 25px;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.watchlist h3{
-    margin-top: 0;
-}
-
-.watchlist-grid{
+.profile-row-one {
+    grid-column: span 12;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
 }
 
-.watch-item{
-    height: 80px;
-    background-color: #ddd;
-    border-radius: 4px;
+.profile-first-name {
+    grid-column: span 6;
 }
 
-.reviews{
-    background-color: #f6f2e7;
-    padding: 25px;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.profile-last-name {
+    grid-column: 7 / span 6;
 }
 
-.reviews h3{
-    margin-top: 0;
+.profile-row-two {
+    grid-column: span 12;
 }
 
-.reviews-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.profile-row-three {
+    grid-column: span 12;
 }
 
-.review-card{
+.review-block {
     background-color: white;
     padding: 15px;
     border-radius: 6px;
     border: 1px solid #ddd;
+    grid-column: span 4;
 }
 
-.review-card h4{
+.watchlist-item {
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 4px;
+    grid-column: span 2;
+}
+
+.review-block h3 {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
-.review-card p{
+.review-block p {
     font-size: 14px;
     color: #555;
 }
@@ -271,9 +237,66 @@ header nav a {
     color: #f5b301;
 }
 
-/* MOVIE FORM STYLING */
+.favorite-container {
+    grid-column: span 3;
+    
+}
 
-/* CONTAINER */
+.favorite-container p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* MOVIE PAGE */
+.movie-container{
+    max-width: 1100px;
+    margin:40px auto;
+}
+
+.movie-container article{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* MOVIE INFO */
+.movie-info{
+    background-color:#f6f2e7;
+    padding:25px;
+    border-radius:6px;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+.movie-info h1{
+    margin-top:0;
+}
+
+.movie-info h2{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.movie-info p{
+    line-height:1.5;
+}
+
+/* ADD RATING BUTTON */
+
+.rating-button{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.rating-button button{
+    padding:8px 14px;
+    background-color:#333;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+/* */
 .browse-container {
     display: flex;
     max-width: 1200px;
@@ -353,4 +376,10 @@ header nav a {
     height: 200px; 
     background-color: #ddd;
     margin-bottom: 10px;
+}
+/* */
+
+/* Resize when on a different device */
+@media screen and (max-width: 960px) {
+    
 }

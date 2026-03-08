@@ -1,127 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-</head>
-    <body onload="loadProfile()">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title></title>
+    </head>
+    <body>
         <header class="grid">
-            <h1>
-                FilmForum
-            </h1>
+            <h1>FilmForum</h1>
             <nav>
                 <a href="index.html">Homepage</a>
-                <a href="movie.html">Movies</a>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+                <a href="movie.html">Movie</a>
                 <a href="profile.html">Profile</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Signup</a>
             </nav>
         </header>
-
-    <main class="profile-container">
-        <section class="profile-card">
-            <div class="profile-header">
-                <div class="profile-avatar">
-                    <img src="doc/images/defaultProfile.gif" alt="Profile Picture">
+        <main>
+            <section>
+                <!-- Profile -->
+                <div class="container-profile">
+                    <div class="container-grid">
+                        <div class="profile-details-info">
+                            <div class="profile-details-info-img">
+                                <img src="images/sample/sample-profile.gif">
+                            </div>  
+                            <div class="profile-details-info-text">
+                                <h3>Username</h3>
+                                <p>username@email.com</p>
+                            </div>
+                        </div>
+                        <div class="profile-details-about">
+                            <div class="profile-row-one">
+                                <div class="profile-first-name">
+                                    <h3>First Name</h3>
+                                    <div class="profile-about-p-container">
+                                        <p>Bob</p>
+                                    </div>       
+                                </div>
+                                <div class="profile-last-name">
+                                    <h3>Last Name</h3>
+                                    <div class="profile-about-p-container">
+                                        <p>Builder</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-row-two">
+                                <h3>Email</h3>
+                                <div class="profile-about-p-container">
+                                    <p>bobthebuilder@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="profile-row-three">
+                                <h3>About</h3>
+                                <div class="profile-about-p-container">
+                                    <p>About</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-name">
-                    <!--I haven't included any code yet where the user and email will update
-                    based on who is logged in. So "user" and "email" are just placeholders-->
-                    <h2>user</h2> 
-                    <p>email</p>
+            </section>
+            <section>
+                <!-- Favorite Movies -->
+                <div class="container-profile">
+                    <h3 class="profile-title">Favorite Movies</h3>
+                    <div class="container-flex">
+                        <div class="container-grid">
+                            <div class="favorite-container">
+                                <img src="images/sample/sample-users.png">
+                                <p>Movie name</p>
+                            </div>
+                            <div class="favorite-container">
+                                <img src="images/sample/sample-users.png">
+                                <p>Movie name</p>
+                            </div>
+                            <div class="favorite-container">
+                                <img src="images/sample/sample-users.png">
+                                <p>Movie name</p>
+                            </div>
+                            <div class="favorite-container">
+                                <img src="images/sample/sample-users.png">
+                                <p>Movie name</p>
+                            </div>
+                            <div class="favorite-container">
+                                <img src="images/sample/sample-users.png">
+                                <p>Movie name</p>
+                            </div>
+                            <div class="favorite-container">
+                                <img src="images/sample/sample-users.png">
+                                <p>Movie name</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="profile-form">
-                <label>First Name</label>
-                <label>Last Name</label>
-                <input type="text" placeholder="Value">
-                <input type="text" placeholder="Value">
-    
-                <label>Email</label>            
-                <input type="text" placeholder="Value" class="email-field">
-    
-                <label>About me</label>
-                <textarea placeholder="Value"></textarea>
-            </div>
-        </section>
-    
-        <section class="favorite-movies">
-            <h3>Favorite Movies</h3>
-            <div class="movie-grid">
-                <div class="movie-card">
-                    <img src="doc/images/defaultProfile.png">
-                    <p>Movie name</p>
+            </section>
+            <section>
+                <!-- Watchlist -->
+                <div class="container-profile">
+                    <h3 class="profile-title">My Watchlist</h3>
+                    <div class="container-grid">
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                        <div class="watchlist-item"></div>
+                    </div>
                 </div>
-                <div class="movie-card">
-                    <img src="doc/images/defaultProfile.png">
-                    <p>Movie name</p>
+            </section>
+            <section>
+                <!-- Reviews -->
+                <div class="container-profile">
+                    <h3 class="profile-title">Reviews</h3>
+                    <div class="container-grid">
+                        <div class="review-block">
+                            <div class="stars">★★★★★</div>
+                            <h4>Review title</h4>
+                            <p>Review body</p>
+                        </div>
+                        <div class="review-block">
+                            <div class="stars">★★★★★</div>
+                            <h4>Review title</h4>
+                            <p>Review body</p>
+                        </div>
+                        <div class="review-block">
+                            <div class="stars">★★★★★</div>
+                            <h4>Review title</h4>
+                            <p>Review body</p>
+                        </div>
+                        <div class="review-block">
+                            <div class="stars">★★★★★</div>
+                            <h4>Review title</h4>
+                            <p>Review body</p>
+                        </div>
+                        <div class="review-block">
+                            <div class="stars">★★★★★</div>
+                            <h4>Review title</h4>
+                            <p>Review body</p>
+                        </div>
+                        <div class="review-block">
+                            <div class="stars">★★★★★</div>
+                            <h4>Review title</h4>
+                            <p>Review body</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="movie-card">
-                    <img src="doc/images/defaultProfile.png">
-                    <p>Movie name</p>
-                </div>
-            </div>
-        </section>
-    
-        <section class="watchlist">
-            <h3>My Watchlist</h3>
-            <div class="watchlist-grid"> 
-                <!--empty. No link for images yet, just layout-->
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-                <div class="watch-item"></div>
-            </div>
-        </section>
-    
-        <section class="reviews">
-            <h3>Reviews</h3>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <!--I have no idea how to do the rating system-->
-                    <div class="stars">★★★★★</div>
-                    <h4>Review title</h4>
-                    <p>Review body</p>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <h4>Review title</h4>
-                    <p>Review body</p>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <h4>Review title</h4>
-                    <p>Review body</p>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <h4>Review title</h4>
-                    <p>Review body</p>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <h4>Review title</h4>
-                    <p>Review body</p>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <h4>Review title</h4>
-                    <p>Review body</p>
-                </div>
-            </div>
-        </section>
+            </section>
         </main>
     </body>
+    <script src="js/script.js"></script>
 </html>
