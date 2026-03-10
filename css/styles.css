@@ -24,11 +24,11 @@ header {
 }
 
 header h1 {
-    grid-column: span 6;
+    grid-column: span 3;
 }
 
 header nav {
-    grid-column: span 6;
+    grid-column: 4 / span 9;
     justify-self: end;
 }
 
@@ -261,7 +261,15 @@ input[type=submit]:hover {
     gap:30px;
 }
 
+
 /* MOVIE INFO */
+.movie-poster{
+    height: 450px;
+    background-color: #ddd;
+    border-radius: 4px;
+    grid-column: span 2;
+}
+
 .movie-info{
     background-color:#f6f2e7;
     padding:25px;
@@ -297,11 +305,42 @@ input[type=submit]:hover {
     border-radius:4px;
     cursor:pointer;
 }
-/* */
+
 .browse-container {
     display: flex;
     max-width: 1200px;
     margin: 20px auto; 
+}
+
+/* REVIEWER INFO */
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.reviewer-pic {
+    width: 35px;
+    height: 35px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #666;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-date {
+    font-size: 11px;
 }
 
 /* SIDEBAR */
@@ -377,7 +416,7 @@ input[type=submit]:hover {
     height: 200px; 
     background-color: #ddd;
     margin-bottom: 10px;
-
+    overflow: hidden;
 }
 
 .movie-image-img img {
@@ -387,10 +426,69 @@ input[type=submit]:hover {
 
 }
 
-/* */
+/* Footer */
+footer hr {
+    border: 0.5px solid black;
+}
+
+.footer-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+.footer-icons {
+    grid-column: span 4;
+}
+
+.footer-icons img {
+    padding-left: 10px;
+}
+
+.footer-links {
+    grid-column: 5 / span 9;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+.footer-links-texts {
+    grid-column: span 3;
+}
 
 /* Resize when on a different device */
+@media screen and (max-width: 950px) {
+    header {
+    color: #eae0cf;
+    background-color: #213448;
+    padding: 10px 30px;
+    align-items: center;
+    }
+
+    header h1 {
+        text-align: center;
+        grid-column: span 12;
+    }
+
+    header nav {
+        grid-column: span 12;
+        justify-self: center;
+    }
+
+    header nav a {
+        padding: 24px;
+        text-decoration: none;
+        color: #eae0cf;
+    }
+}
+
 @media screen and (max-width: 1370px) {
+    
     .container-grid {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -511,9 +609,38 @@ input[type=submit]:hover {
         display: flex;
         justify-self: center;
     }
+
+    .footer-icons {
+        grid-column: span 12;
+    }
+
+    .footer-icons img {
+        padding-left: 10px;
+    }
+
+    .footer-links {
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 30px;
+    }
+
+    .footer-links-texts {
+        grid-column: span 6;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    header nav {
+        grid-column: span 12;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 515px) {
+
     .favorite-container {
         grid-column: span 6;
     }

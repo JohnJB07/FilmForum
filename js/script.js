@@ -21,10 +21,6 @@ function runfunc() {
     localStorage.setItem('moviedat', JSON.stringify(movie_data));
 };
 
-/* 
-    This monstrosity of a code just adds a movie container element
-
-*/
 function addMovie() {
     //
     const bGrid = document.getElementById('browse-grid');
@@ -76,22 +72,3 @@ function randomizeContent() {
 
     return dict[Math.floor(Math.random() * dict.length)];
 }
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    
-    const addButton = document.getElementById('add-movie-btn');
-    const container = document.getElementById('browse-grid');
-    const templateItem = document.getElementById('browse-card');
-
-    addButton.addEventListener('click', function() {
-
-        const newItem = templateItem.cloneNode(true);
-        
-        newItem.removeAttribute('id');
-
-        container.appendChild(newItenm);
-
-    });
-    
-    
-});

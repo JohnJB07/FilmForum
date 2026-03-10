@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
         <title></title>
     </head>
@@ -18,29 +18,41 @@
             </nav>
         </header>
 
-        <main class = "movie-container">
+        <main class="movie-container">
             <article>
-                <section class = "movie-info">
-                    <h1>Movie Title 2026<h1>
-                    <p>Synopsis sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
 
-                    <h2>Directed by</h2>
-                    <p>john Smith</p>
+                <section class="movie-info mb-4 shadow-sm">
+                    <div class="movie-poster"></div>
+                    <div class="row">
 
-                    <h2>Cast</h2>
-                    <p>Bob Smith</p>
-                    <p>Jaden Smith</p>
-                    <p>Will Smith</p>
+                        <div class="col-8">
+                            <h1 class="mb-3">Movie Title 2026</h1>
+                            <p class="mb-0">Synopsis sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+
+                        <div class="col-4">
+                            <h2 class="mb-1">Directed by</h2>
+                            <p>John Smith</p>
+
+                            <h2 class="mb-1">Cast</h2>
+                            <ul class="list-unstyled">
+                                <li>Bob Smith</li>
+                                <li>Jaden Smith</li>
+                                <li>Will Smith</li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </section>
 
-                <section class = "rating-button">
-                    <button>Add rating</button>
+               <section class="rating-button d-flex justify-content-end mb-4">
+                    <button class="btn btn-dark">Add rating</button>
                 </section>
 
-                <section>
+<section>
                         <div class="moview-review-container">
                         <h3 class="profile-title">Reviews</h3>
                         <div class="container-grid">
@@ -78,6 +90,55 @@
                     </div>
                 </section>
             </article>
-        <main>
+        </main>
+        <footer>
+        <hr>
+            <div class="container-grid">
+                <div class="footer-container">
+                    <div class="footer-icons">
+                        <a href="x.com"><img src="images/svg/x.svg" width="35" height="35" alt="twitter-x"></a>
+                        <a href="facebook.com"><img src="images/svg/facebook.svg" width="35" height="35" alt="twitter-x"></a>
+                        <a href="instagram.com"><img src="images/svg/instagram.svg" width="35" height="35" alt="twitter-x"></a>
+                        <a href="youtube.com"><img src="images/svg/youtube.svg" width="35" height="35" alt="twitter-x"></a>
+                        
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-links-texts">
+                            <h2>About</h2>
+                            <p>ITS121-1L</p>
+                            <p>AM1</p>
+                            <p>Final Project</p>
+                            <p>HTML + CSS</p>
+                            <p>Javascript</p>
+                        </div>
+                        <div class="footer-links-texts">
+                            <h2>Best Umamusume</h2>
+                            <p>Goldship</p>
+                            <p>Urara Haru</p>
+                            <p>Matikanetannhauser</p>
+                            <p>Tokai Teio</p>
+                            <p>Kitasan Black</p>
+                        </div>
+                        <div class="footer-links-texts">
+                            <h2>Best Umamusume</h2>
+                            <p>Mayano Top Gun</p>
+                            <p>Oguri Cap</p>
+                            <p>Narita Top Road</p>
+                            <p>Admire Vega</p>
+                            <p>Mejiro Mcqueen</p>
+                        </div>
+                        <div class="footer-links-texts">
+                            <h2>Members</h2>
+                            <p>Borre, John Jayvee </p>
+                            <p>Enorme, John Gabriel </p>
+                            <p>Esdrelon, Arianna Louise </p>
+                            <p>Lazo, Love Alexa </p>
+                            <p>Lopez, Sean Cymon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
+    <script src="js/script.js"></script>
 </html>
