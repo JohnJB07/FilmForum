@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css">
         <title></title>
     </head>
-    <body>
+    <body onload="loadMovieData()">
         <header class="grid">
             <h1>FilmForum</h1>
             <nav>
@@ -21,13 +22,13 @@
         <main class="movie-container">
             <article>
 
-                <section class="movie-info mb-4 shadow-sm">
+                    <section class="movie-info p-4 mb-4 shadow-sm rounded">
                     <div class="movie-poster"></div>
-                    <div class="row">
+                    <div class="row g-4">
 
                         <div class="col-8">
-                            <h1 class="mb-3">Movie Title 2026</h1>
-                            <p class="mb-0">Synopsis sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            <h1 id="movie-header" class="mb-3">Movie Title 2026</h1>
+                            <p id="movie-description" class="mb-0">Synopsis sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             </p>
@@ -35,10 +36,10 @@
 
                         <div class="col-4">
                             <h2 class="mb-1">Directed by</h2>
-                            <p>John Smith</p>
+                            <p id="movie-director">John Smith</p>
 
                             <h2 class="mb-1">Cast</h2>
-                            <ul class="list-unstyled">
+                            <ul id="movie-cast" class="list-unstyled">
                                 <li>Bob Smith</li>
                                 <li>Jaden Smith</li>
                                 <li>Will Smith</li>
@@ -48,11 +49,11 @@
                     </div>
                 </section>
 
-               <section class="rating-button d-flex justify-content-end mb-4">
+                <section class="rating-button d-flex justify-content-end mb-4">
                     <button class="btn btn-dark">Add rating</button>
                 </section>
 
-<section>
+                <section>
                         <div class="moview-review-container">
                         <h3 class="profile-title">Reviews</h3>
                         <div class="container-grid">

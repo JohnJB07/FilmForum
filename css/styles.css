@@ -169,7 +169,6 @@ input[type=submit]:hover {
 }
 
 .profile-details-about {
-    margin: 40px 0 0 40px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
@@ -307,10 +306,16 @@ input[type=submit]:hover {
 }
 
 .browse-container {
-    display: flex;
     max-width: 1200px;
     margin: 20px auto; 
 }
+
+.browse-container p,h3 {
+    word-wrap: break-word;
+    margin: 10px 0;
+}
+
+
 
 /* REVIEWER INFO */
 .reviewer {
@@ -345,20 +350,23 @@ input[type=submit]:hover {
 
 /* SIDEBAR */
 .browse-sidebar {
-    width: 250px; 
-    height: 300px; 
     background-color: #f6f2e7;
     padding: 20px;
-    margin-right: 20px; 
     border: 1px solid #ccc;
+    grid-column: span 3;
+    max-height: 200px;
 }
 
 .tag-group {
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .tag {
-    display: inline-block; /* Makes them sit next to each other */
+    display: inline-block; 
     background-color: #e0e0e0;
     padding: 5px 10px;
     margin-bottom: 5px;
@@ -369,39 +377,43 @@ input[type=submit]:hover {
 
 /* CONTENT AREA */
 .browse-content {
-    width: 100%; /* Takes whatever space is left */
+    grid-column: span 9;
+    flex-grow: 1;
 }
 
 .browse-top-bar {
     margin-bottom: 20px;
-    display: flex; 
-    justify-content: space-between; 
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
 }
 
 .browse-search {
-    width: 30%;
+    width: 100%;
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #ccc;
+    grid-column: span 8;
 }
 
 .browse-add-btn {
-    width: 15%;
+    width: 100%;
     background-color: #213448;
     color: #eae0cf;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    grid-column: span 2;
 }
 
 .browse-grid {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
 }
 
 .browse-card {
-    width: 22%; 
+    grid-column: span 3;
     margin: 1.5%;
     background-color: #f6f2e7;
     border: 1px solid #ccc;
@@ -409,11 +421,13 @@ input[type=submit]:hover {
     text-align: center;
     box-sizing: border-box; 
     border-radius: 8px;
+    position: relative;
 }
+
 
 .browse-image-placeholder {
     width: 100%;
-    height: 200px; 
+    aspect-ratio: 1/1;
     background-color: #ddd;
     margin-bottom: 10px;
     overflow: hidden;
@@ -421,10 +435,26 @@ input[type=submit]:hover {
 
 .movie-image-img img {
     max-width: 100%;
-    height: 200px;
+    aspect-ratio: 1/1;
     object-fit: cover;
 
 }
+
+.card-href {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: block; 
+    background-color: rgba(255, 0, 0, 0.5)
+}
+
+.short-text{
+    display: none;
+}
+
 
 /* Footer */
 footer hr {
@@ -461,200 +491,125 @@ footer hr {
     grid-column: span 3;
 }
 
-/* Resize when on a different device */
-@media screen and (max-width: 950px) {
-    header {
-    color: #eae0cf;
-    background-color: #213448;
-    padding: 10px 30px;
-    align-items: center;
-    }
-
+@media only screen and (max-width: 769px) {
     header h1 {
-        text-align: center;
         grid-column: span 12;
+        text-align: center;
     }
 
     header nav {
         grid-column: span 12;
+        display: flex;
+        flex-direction: column;
         justify-self: center;
     }
 
-    header nav a {
-        padding: 24px;
-        text-decoration: none;
-        color: #eae0cf;
-    }
-}
-
-@media screen and (max-width: 1370px) {
-    
-    .container-grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
-    }
-
-    .profile-title {
-        padding-left: 5px;
-    }
-
-    .profile-details-info {
+    /* PROFILE RWD */
+    /* Profile texts */
+    .profile-details-info { 
         grid-column: span 12;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
     }
 
-    .profile-details-info img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin: 40px 0 0 40px;
+    .profile-details-info-img {
+        grid-column: span 12;
+        margin-left: 70px;
     }
 
     .profile-details-info-text {
-        margin: 40px 0 0 0;
-    }
-
-    .profile-details-info-text h3 {
-        margin: 0;
-        font-size: 24px;
-    }
-
-    .profile-details-info-text p {
-        margin: 5px 0 0 0;
-        color: gray;
-        font-size: 12px;
+        grid-column: span 12;
+        text-align: center;
+        margin-top: -20px;
     }
 
     .profile-details-about {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
         grid-column: span 12;
-    }
-
-    .profile-about-p-container {
-        border: 1px solid black;
-        border-radius: 6px;
-    }
-
-    .profile-row-one {
-        grid-column: span 12;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
     }
 
     .profile-first-name {
-        grid-column: span 6;
+        grid-column: span 12;
     }
 
     .profile-last-name {
-        grid-column: 7 / span 6;
-    }
-
-    .profile-row-two {
         grid-column: span 12;
     }
 
-    .profile-row-three {
-        grid-column: span 12;
-    }
-
-    .review-block {
-        background-color: white;
-        padding: 15px;
-        border-radius: 6px;
-        border: 1px solid #ddd;
-        grid-column: span 6;
-    }
-
-    .watchlist-item {
-        height: 80px;
-        background-color: #ddd;
-        border-radius: 4px;
-        grid-column: span 6;
-    }
-
-    .review-block h3 {
-        margin: 5px 0;
-        font-size: 14px;
-    }
-
-    .review-block p {
-        font-size: 14px;
-        color: #555;
-    }
-
-    .stars{
-        font-size: 14px;
-        color: #f5b301;
-    }
-
+    /* Favorite movies */
     .favorite-container {
-        grid-column: span 3;
-    }
-
-    .favorite-container p {
-        text-align: center;
-        margin-top: 8px;
-        font-size: 14px;
+        grid-column: span 6;
     }
 
     .favorite-container img {
-        width: 90%;
-        height: 95%;
+        width: 75%;
         display: flex;
         justify-self: center;
     }
 
+    /* Review Block and Watchlist block */
+    .watchlist-item {
+        grid-column: span 6;
+    }
+
+    .review-block {
+        grid-column: span 6;
+    }
+
+    /* FOOTER */
     .footer-icons {
         grid-column: span 12;
     }
 
-    .footer-icons img {
-        padding-left: 10px;
-    }
-
     .footer-links {
         grid-column: span 12;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
     }
 
     .footer-links-texts {
         grid-column: span 6;
     }
-}
 
-@media screen and (max-width: 675px) {
-    header nav {
+    /*MOIVE BROWSER*/
+
+    .browse-sidebar{
         grid-column: span 12;
-        justify-self: center;
-        display: flex;
-        flex-direction: column;
+        margin-bottom: 20px;
     }
+
+    .browse-content{
+        grid-column: span 12;
+    }
+
+    .browse-card{
+        grid-template-columns: span 6;
+    }
+
+    .full-text{
+        display:none;
+    }
+
+    .short-text {
+        display: inline-block;
+    }
+
+
 }
 
-@media screen and (max-width: 515px) {
-
+@media only screen and (max-width: 1280px) {
+    /* PROFILE RWD */
     .favorite-container {
+        grid-column: span 4;
+    }
+
+    .watchlist-item {
+        grid-column: span 3;
+    }
+
+    .footer-links-texts {
         grid-column: span 6;
     }
-
-    .favorite-container p {
-        text-align: center;
-        margin-top: 8px;
-        font-size: 14px;
+    .profile-details-info {
+        grid-column: span 12;
     }
 
-    .favorite-container img {
-        width: 75%;
-        height: 75%;
-        display: flex;
-        justify-self: center;
+    .profile-details-about {
+        grid-column: span 12
     }
 }

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <title></title>
     </head>
-    <body>
+    <body onload="localStorage.clear()">
         <header class="grid">
             <h1>FilmForum</h1>
             <nav>
@@ -17,7 +17,7 @@
                 <a href="register.html">Signup</a>
             </nav>
         </header>
-        <main class="browse-container">
+        <main class="browse-container grid">
             <aside class="browse-sidebar">
                 <h3>Categories</h3>
                 <div class="tag-group">
@@ -26,40 +26,24 @@
                     <span class="tag">Genre <button>x</button></span>
                 </div>
             </aside>
-
+            <!-- class="container-grid" -->
             <section class="browse-content">
+
                 <div class="browse-top-bar">
                     <input type="text" placeholder="Search..." class="browse-search">
-                    <button id="add-movie-btn" class="browse-add-btn" onclick="addMovie()">Add movie</button>
-                    <button id="rem-movie-btn" class="browse-add-btn" onclick="removeMovie()">Remove Movie</button>
+                    <button id="add-movie-btn" class="browse-add-btn" onclick="addMovie()"><span class = "full-text">Add movie </span> <span class = "short-text"> + </span></button>
+                    <button id="rem-movie-btn" class="browse-add-btn" onclick="removeMovie()"><span class = "full-text">Remove movie </span> <span class = "short-text"> - </span></button>
                 </div>
-                <div id="browse-grid" class="browse-grid">
-                    <div id="browse-card" class="browse-card">
-                        <div class="browse-image-placeholder"></div>
-                        <p>Movie Name</p>
-                    </div>
-                    <div class="browse-card">
-                        <div class="browse-image-placeholder"></div>
-                        <p>Movie Name</p>
-                    </div>
-                    <div class="browse-card">
-                        <div class="browse-image-placeholder"></div>
-                        <p>Movie Name</p>
-                    </div>
-                    <div class="browse-card">
-                        <div class="browse-image-placeholder"></div>
-                        <p>Movie Name</p>
-                    </div>
-                    <div class="browse-card">
-                        <div class="browse-image-placeholder"></div>
-                        <p>Movie Name</p>
-                    </div>
 
-                    <div class="browse-card">
-                        <div class="browse-image-placeholder"></div>
-                        <p>Movie Name</p>
+                <div id="browse-grid" class="browse-grid">
+                    <div data-movie-id="1" onclick="clickedMovieData(this)" id="browse-card" class="browse-card" style="display: none">
+                        <a href="movie.html">
+                            <div class="browse-image-placeholder"></div>
+                            <p>Movie Name</p>
+                        </a>
                     </div>
                 </div>
+                
             </section>
         </main>
         <footer>
