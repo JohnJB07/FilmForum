@@ -26,22 +26,25 @@ function addMovie() {
     const paragraph = document.createElement('p');
     const cardImage = document.createElement('div');
     const imageContent = document.createElement('img');
+    const anchor = document.createElement('a');
     let randomContent = randomizeContent();
 
     // 
+    anchor.setAttribute('href', 'movie.html');
+    anchor.className = 'browse-card';
     imageContent.setAttribute('src', randomContent.imagePath);
-    cardContainer.className = "browse-card";
     cardContainer.setAttribute('data-movie-id', randomContent.movieId);
-    cardContainer.setAttribute('onclick', 'clickedMovieData(this)')
+    cardContainer.setAttribute('onclick', 'clickedMovieData(this)');
     cardImage.className = "browse-image-placeholder";
     paragraph.textContent = randomContent.name;
     imageContent.className = "movie-image-img";
 
-    // Append the children...
+    // Append child to element node to DOM
     cardImage.appendChild(imageContent);
     cardContainer.appendChild(cardImage);
     cardContainer.appendChild(paragraph);
-    bGrid.appendChild(cardContainer);   
+    anchor.appendChild(cardContainer);   
+    bGrid.appendChild(anchor);   
 }
 
 function removeMovie() {
@@ -91,5 +94,3 @@ function clickedMovieData(element) {
     console.log("Saving movie data: " + JSON.stringify(dict[movieId - 1]));
     localStorage.setItem('movie-data', JSON.stringify(dict[movieId - 1]));
 }
-
-console.log(window.outerWidth);
